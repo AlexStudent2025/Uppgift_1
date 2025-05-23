@@ -19,7 +19,7 @@ function Create-Subfolders {
 
         try {
             # Försök skapa mappen
-            New-Item -Path $fullPath -ItemType Directory
+            New-Item -Path $fullPath -ItemType Directory -ErrorAction Stop
             Write-Host "Skapade $fullPath"
         }
         catch {
